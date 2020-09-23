@@ -1,0 +1,144 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>What does the program do?</title>
+</head>
+
+<body>
+
+<p class="MsoBodyText" align="center"><img border="0" src="CS_Computer_Verifier.jpg" width="340" height="66"></p>
+
+<p class="MsoBodyText" align="center"><b><font size="5">What does CS Computer
+Verifier do when you use the program?</font></b></p>
+<p class="MsoNormal" align="center" style="text-align:center"><b>&nbsp;<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal" align="center" style="text-align:center"><b>Step by step
+Explanation.<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal" align="center" style="text-align:center"><b>By Shane M.
+Croft<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal" align="center" style="text-align:center"><b>&nbsp;<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal"><b>When the program loads:<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>When the program loads it makes a call to do the database to load the
+list box with all the computer names that have been entered.<span style="mso-spacerun: yes">&nbsp;
+</span>If it is your first time running the program the list box will be empty.</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal"><b>Selecting computers:<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>When you choose to select computers a couple of things happen.<span style="mso-spacerun:
+yes">&nbsp; </span>The first is a call to ADSI 2.5 by Microsoft to load a
+selection box with any domains it can find.<span style="mso-spacerun: yes">&nbsp;
+</span>This is for you can choose computer names that are listed on a domain.<span style="mso-spacerun: yes">&nbsp;
+</span>You also have the option to put in specified computer names if it
+doesn’t show up in the selection box.<span style="mso-spacerun: yes">&nbsp; </span>After
+you have selected your computers the computer name list is saved to a file in
+the programs install directory. After this it will move to the “Storing
+Information on all selected Computers” section and load the computer list that
+you have just selected.</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal"><b>Storing Information on all selected Computers:<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>When this form loads a lot happens here. When you choose to start to
+saving information on the computers into the database it will first do two
+different things.<span style="mso-spacerun: yes">&nbsp; </span>The first thing
+it does is check and see is the computer is online, if the computer is offline
+then it will be removed from the list and not added to the database.<span style="mso-spacerun: yes">&nbsp;
+</span>The second thing that it does is check to make sure the computer name is
+not already in the database, if it is in the database it will be skipped and
+move to the next computer. After these two important steps are done it will make
+calls to WMI 1.5 by Microsoft to pull the information on the selected computers.<span style="mso-spacerun: yes">&nbsp;
+</span>You must have administrator privileges on all the machines to do this.
+After the information has been received it is saved to the database. When all is
+done it will show a window showing which computers where not added to the
+database and why they weren’t.<span style="mso-spacerun: yes">&nbsp; </span>If
+all computers were entered into the database you will not see the window.</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal"><b>Check computer Offline/Online Status:<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>When you choose this option a form will be loaded with all the computers
+in your database.<span style="mso-spacerun: yes">&nbsp; </span>After which you
+can check to see if the computers are online before you try to verify their
+information.<span style="mso-spacerun: yes">&nbsp; </span>When the program goes
+to check if the computer is online or offline it is simply seeing if it can get
+its IP address, if it can’t the computer is offline.<span style="mso-spacerun:
+yes">&nbsp; </span>Since getting the IP address doesn’t require administrator
+privileges this is the best way to check the online or offline status instead of
+pinging since it is more reliable.</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal"><b>View/Delete Saved Computer Information:<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>This selection will load all the computers from the database to a
+selection box, when you double click on the selected computer you can view
+it’s information. You also have two choices of removing the selected computer
+from the database or removing all the computers from the database.</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal"><b>Verifying Computer Information:<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>After you have the computer information stored into the database you can
+now verify at any time that the hardware settings that were saved are still the
+same.<span style="mso-spacerun: yes">&nbsp; </span>When the program goes to
+check the computers it will first load the save data and the make the same calls
+to WMI 1.5 by Microsoft as the “Storing information on selected computers”
+section.<span style="mso-spacerun: yes">&nbsp; </span>After it has received the
+information it then will compare the data and put an alert into the alert box
+letting you know what doesn’t match.<span style="mso-spacerun: yes">&nbsp; </span>That’s
+it, a great and simple way to keep an eye on your computers remotely and with no
+extra software to install.</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal"><b>Last Note:<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>CS Computer Verifier is only meant for NT 4 and Windows 2000 only as of
+right now.<span style="mso-spacerun: yes">&nbsp; </span>The reason for this is
+for two reasons.<span style="mso-spacerun: yes">&nbsp; </span>The first reason
+is with the security measures of NT and 2000 this program can be ran with out
+having to install client software.<span style="mso-spacerun: yes">&nbsp; </span>The
+second reason if for security, you have to be an administrator to get any of the
+information, which makes this program better since not just any body can use it.</p>
+<p class="MsoNormal">&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal" align="center" style="text-align:center">Thank you.</p>
+<p class="MsoNormal" align="center"><a href="http://www.croftssoftware.com/">http://www.croftssoftware.com</a></p>
+<p align="center"><span style="mso-char-type: symbol; mso-symbol-font-family: Symbol; font-size: 12.0pt; font-family: Symbol; mso-ascii-font-family: Times New Roman; mso-fareast-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Ó</span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA"> 2000 Crofts Software</span>
+
+</body>
+
+</html>
